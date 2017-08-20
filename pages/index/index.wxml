@@ -6,5 +6,6 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <text>{{fakeData}}</text>
   </view>
 </view>
