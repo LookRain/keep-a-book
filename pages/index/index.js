@@ -45,8 +45,8 @@ Page({
       data: {
         id: this.data.userRaw,
         payer: 'luyu',
-        amount: '100',
-        receiver: JSON.stringify([1,2,222])
+        amount: 100,
+        receiver: [1,2,222]
       },
 
       success: res => {
