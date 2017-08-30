@@ -17,8 +17,8 @@ Page({
     console.log('onLoad')
     var that = this
     
-//     let uri = 'https://jsonplaceholder.typicode.com/posts/1'
-    let uri = ''
+  let uri = 'https://jsonplaceholder.typicode.com/posts/1'
+  
     wx.request({
       url: uri,
       header: {
