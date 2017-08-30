@@ -4,7 +4,7 @@
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     
   </view>
-  <view class="textContainer">
+  <view bindtap="bindViewTap" class="textContainer">
     <text class="userinfo-nickname">user info is: {{userRaw}}</text>
   </view>
   <view class="usermotto">

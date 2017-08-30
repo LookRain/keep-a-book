@@ -36,10 +36,26 @@ Page({
 
   //事件处理函数
   bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+    wx.request({
+      url: 'http://localhost:5000/new-transaction',
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      data: {
+        id: this.data.userRaw,
+        payer: 'luyu',
+        amount: '100',
+        receiver: JSON.stringify([1,2,222])
+      },
+
+      success: res => {
+        console.log('haha' + res.data)
+        
+      }
     })
   },
+  
   onLoad: function () {
     console.log('onLoad')
     var that = this
