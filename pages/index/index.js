@@ -44,14 +44,9 @@ Page({
     console.log('onLoad')
     var that = this
     
-<<<<<<< HEAD
     let uri = 'http://localhost:5000/all-transaction'
 
 
-=======
-//     let uri = 'https://jsonplaceholder.typicode.com/posts/1'
-    let uri = ''
->>>>>>> 1b9e067306068d12f895e7035feb13553948629e
     wx.request({
       url: uri,
       header: {
