@@ -1,11 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
+  <view class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    
+  </view>
+  <view class="textContainer">
+    <text class="userinfo-nickname">user info is: {{userRaw}}</text>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-    <text>{{fakeData}}</text>
+
+        <!-- <button  formType="submit" bindtap="goToHistory" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary"> View History </button> -->
+
+
+      <navigator class="nav" url="/pages/logs/logs" hover-class="navigator-hover">View History</navigator>
   </view>
 </view>

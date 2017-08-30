@@ -3,10 +3,37 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'Helsslo World',
     userInfo: {},
-    fakeData: ''
+    userRaw: {},
+    allTransactions: '',
+
+    defaultSize: 'default',
+    primarySize: 'default',
+    warnSize: 'default',
+    disabled: false,
+    plain: true,
+    loading: false
   },
+  setDisabled: function(e) {
+    this.setData({
+      disabled: !this.data.disabled
+    })
+  },
+  setPlain: function(e) {
+    this.setData({
+      plain: !this.data.plain
+    })
+  },
+  setLoading: function(e) {
+    this.setData({
+      loading: !this.data.loading
+    })
+  },
+  goToHistory: () => {
+    console.log('go to')
+  },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -17,8 +44,14 @@ Page({
     console.log('onLoad')
     var that = this
     
-  let uri = 'https://jsonplaceholder.typicode.com/posts/1'
-  
+<<<<<<< HEAD
+    let uri = 'http://localhost:5000/all-transaction'
+
+
+=======
+//     let uri = 'https://jsonplaceholder.typicode.com/posts/1'
+    let uri = ''
+>>>>>>> 1b9e067306068d12f895e7035feb13553948629e
     wx.request({
       url: uri,
       header: {
@@ -29,7 +62,7 @@ Page({
       success: res => {
         console.log('haha' + res.statusCode)
         this.setData({
-          fakeData: JSON.stringify(res.data)
+          allTransactions: JSON.stringify(res.data)
         })
       }
     })
@@ -39,8 +72,10 @@ Page({
     app.getUserInfo(function(userInfo){
       //更新数据
       that.setData({
-        userInfo:userInfo
+        userInfo:userInfo,
+        userRaw: userInfo.data.openid
       })
     })
   }
 })
+

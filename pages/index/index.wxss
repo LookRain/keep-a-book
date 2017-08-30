@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  white-space: pre-wrap;
+}
+.textContainer {
+  /* display: inline-block; */
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  word-break:break-all;
+  font-size: 30rpx;
 }
 
 .userinfo-avatar {
@@ -14,8 +22,30 @@
 
 .userinfo-nickname {
   color: #aaa;
+  /* font-size: 10rpx; */
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 150px;
+}
+
+/** wxss **/
+/** 修改button默认的点击态样式类**/
+.button-hover {
+  background-color: #B01A1A;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}
+
+.nav {
+  font-size: 30rpx;
+  color: #42b9f4;
+  padding: 13rpx 60rpx 13rpx 60rpx;
+  border-width: 1rpx 1rpx 1rpx 1rpx ;  
+  /* border-color: red;   */
+  border-style: solid;  
+  border-radius: 10rpx;
+  border-color: #42b9f4;
 }
